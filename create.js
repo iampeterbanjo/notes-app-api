@@ -34,6 +34,6 @@ export const main = async (event, context, callback) => {
     await dynamoDbLib.call("put", params);
     callback(null, success(params.Item));
   } catch (error) {
-    callback(null, failure({ status: false }));
+    callback(null, failure({ status: false, error }));
   }
 };
