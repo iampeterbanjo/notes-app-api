@@ -3,9 +3,11 @@ import AWS from "aws-sdk";
 
 AWS.config.update({ region: "eu-west-1" });
 const dynamoDb = new AWS.DynamoDB.DocumentClient();
+
 export function main(event, context, callback) {
   // Request body is passed in as a JSON encoded string in 'event.body'
   const data = JSON.parse(event.body);
+
   const params = {
     TableName: "notes",
     // 'Item' contains the attributes of the item to be created
@@ -34,7 +36,7 @@ export function main(event, context, callback) {
 
     if (error) {
       const response = {
-        headers: headers,
+        headers,
         statusCode: 500,
         body: JSON.stringify({ status: false })
       };
@@ -44,7 +46,7 @@ export function main(event, context, callback) {
 
     const response = {
       statusCode: 200,
-      headers: headers,
+      headers,
       body: JSON.stringify(params.Item)
     };
     callback(null, response);
