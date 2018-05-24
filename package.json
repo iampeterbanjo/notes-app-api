@@ -9,9 +9,10 @@
   "scripts": {
     "clean": "rm -rf ./node_modules",
     "test": "jest",
-    "sls:list": "serverless invoke local --function list --path mocks/list-event.json",
-    "sls:create": "serverless invoke local --function create --path ./mocks/create-event.json",
-    "sls:get": "serverless invoke local --function get --path mocks/get-event.json"
+    "sls:mock:list": "serverless invoke local --function list --path mocks/list-event.json",
+    "sls:mock:create": "serverless invoke local --function create --path ./mocks/create-event.json",
+    "sls:mock:update": "serverless invoke local --function get --path mocks/update-event.json",
+    "sls:mock:get": "serverless invoke local --function get --path mocks/get-event.json"
   },
   "author": "",
   "license": "MIT",
