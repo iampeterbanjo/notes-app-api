@@ -8,7 +8,10 @@
   "main": "handler.js",
   "scripts": {
     "clean": "rm -rf ./node_modules",
-    "test": "jest"
+    "test": "jest",
+    "sls:list": "serverless invoke local --function list --path mocks/list-event.json",
+    "sls:create": "serverless invoke local --function create --path ./mocks/create-event.json",
+    "sls:get": "serverless invoke local --function get --path mocks/get-event.json"
   },
   "author": "",
   "license": "MIT",
