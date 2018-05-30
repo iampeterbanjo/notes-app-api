@@ -9,6 +9,7 @@
   "scripts": {
     "clean": "rm -rf ./node_modules",
     "test": "jest",
+    "deploy": "serverless deploy",
     "sls:mock:list": "serverless invoke local --function list --path mocks/list-event.json",
     "sls:mock:create": "serverless invoke local --function create --path ./mocks/create-event.json",
     "sls:mock:delete": "serverless invoke local --function delete --path ./mocks/delete-event.json",

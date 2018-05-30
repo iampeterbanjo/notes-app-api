@@ -95,4 +95,3 @@ functions:
           method: delete
           cors: true
           authorizer: aws_iam
-
