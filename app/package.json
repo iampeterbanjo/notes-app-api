@@ -1,0 +1,17 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-scripts": "1.1.4"
+  },
+	"scripts": {
+		"build": "react-scripts build",
+		"clean": "rm -rf node_modules/",
+		"eject": "react-scripts eject",
+		"start": "react-scripts start",
+		"test": "react-scripts test --env=jsdom"
+	}
+}
