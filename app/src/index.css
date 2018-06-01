@@ -4,6 +4,8 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   color: #333;
+  height: 100vh;
+  width: 100vw;
 }
 
 h1,
@@ -13,4 +15,15 @@ h4,
 h5,
 h6 {
   font-family: "PT Serif", serif;
+}
+
+/* prevent mobile browser zoom-in */
+select.form-control,
+textarea.form-control,
+input.form-control {
+  font-size: 16px;
+}
+
+input[type="file"] {
+  width: 100%;
 }
