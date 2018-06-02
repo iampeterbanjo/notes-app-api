@@ -4,14 +4,23 @@
   "private": true,
   "dependencies": {
     "react": "^16.4.0",
+    "react-bootstrap": "^0.32.1",
     "react-dom": "^16.4.0",
+    "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.4"
   },
-	"scripts": {
-		"build": "react-scripts build",
-		"clean": "rm -rf node_modules/",
-		"eject": "react-scripts eject",
-		"start": "react-scripts start",
-		"test": "react-scripts test --env=jsdom"
-	}
+  "scripts": {
+    "build": "react-scripts build",
+    "clean": "rm -rf node_modules/",
+    "eject": "react-scripts eject",
+    "start": "react-scripts start",
+    "test": "react-scripts test --env=jsdom"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.8.2"
+  }
 }
