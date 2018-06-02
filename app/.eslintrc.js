@@ -1,6 +1,6 @@
 module.exports = {
   extends: "airbnb",
   rules: {
-    quotes: [2, "single", "avoid-escape"]
+    quotes: [2, "double", "avoid-escape"]
   }
 };
