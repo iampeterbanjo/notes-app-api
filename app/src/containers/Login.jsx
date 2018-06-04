@@ -10,7 +10,7 @@ export default class Login extends Component {
 
     this.state = {
       email: "",
-      password: ""
+      password: "",
     };
   }
 
@@ -18,18 +18,18 @@ export default class Login extends Component {
     return this.state.email.length > 0 && this.state.password.length > 0;
   }
 
-  handleChange = event => {
+  handleChange = (event) => {
     this.setState({
-      [event.target.id]: event.target.value
+      [event.target.id]: event.target.value,
     });
   };
 
-  handleSubmit = async event => {
+  handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
       await Auth.signIn(this.state.email, this.state.password);
-      alert("Logged in");
+      this.props.userHasAuthenticated(true);
     } catch (e) {
       alert(e.message);
     }

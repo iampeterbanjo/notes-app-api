@@ -13,12 +13,13 @@
   },
   "scripts": {
     "build": "react-scripts build",
-    "clean": "rm -rf node_modules/",
+    "clean": "rm -rf node_modules/; rm ./package-lock.json ./yarn.lock ./shrinkwrap.yaml || exit 0",
     "eject": "react-scripts eject",
     "start": "react-scripts start",
     "test": "react-scripts test --env=jsdom"
   },
   "devDependencies": {
+    "babel-eslint": "^8.2.3",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.12.0",
