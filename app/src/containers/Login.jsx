@@ -27,9 +27,13 @@ export default class Login extends Component {
   handleSubmit = async (event) => {
     event.preventDefault();
 
+    const { history, userHasAuthenticated } = this.props;
+    const { email, password } = this.state;
+
     try {
-      await Auth.signIn(this.state.email, this.state.password);
-      this.props.userHasAuthenticated(true);
+      await Auth.signIn(email, password);
+      userHasAuthenticated(true);
+      history.push("/");
     } catch (e) {
       alert(e.message);
     }
